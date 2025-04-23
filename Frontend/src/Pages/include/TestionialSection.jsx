@@ -62,9 +62,7 @@ const TestimonialSection = ({ testimonials }) => {
                       </h2>
                     </div>
                     <div className="title-desc">
-                      <p>
-                        Long established fact that reader will be distracted by the readable content of a page when looking at its layout. The point of using <b>lorem ipsum</b> is that it has a more-or-less normal distribution of letters.
-                      </p>
+                     
                     </div>
                   </div>
                   {testimonials?.length > 0 ?

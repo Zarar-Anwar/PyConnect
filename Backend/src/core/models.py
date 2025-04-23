@@ -24,8 +24,8 @@ class Application(models.Model):
         max_length=100, default='support@zaalasociety.com', help_text='Application contact email 1'
     )
 
-    contact_phone = PhoneNumberField(
-        help_text='Application contact phone 1', default='+923029677678'
+    contact_phone = models.CharField(
+        max_length=100, help_text='Your application business line', default='will be update it soon'
     )
 
     address = models.CharField(

@@ -99,8 +99,12 @@ const Header = ({ appData }) => {
                                         <li className={`mega-menu-item ${location.pathname === '/' ? 'active' : ''}`}>
                                             <Link to="/" className="mega-menu-link">Home</Link>
                                         </li>
+                                        
                                         <li className={`mega-menu-item ${location.pathname === '/videos' ? 'active' : ''}`}>
                                             <Link to="/videos" className="mega-menu-link">Videos</Link>
+                                        </li>
+                                        <li className={`mega-menu-item ${location.pathname === '/contact-us' ? 'active' : ''}`}>
+                                            <Link to="/services" className="mega-menu-link">Treatments</Link>
                                         </li>
                                         <li className={`mega-menu-item ${location.pathname === '/about-us' ? 'active' : ''}`}>
                                             <Link to="/about-us" className="mega-menu-link">About</Link>

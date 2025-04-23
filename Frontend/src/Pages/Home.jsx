@@ -96,10 +96,18 @@ const Home = ({ title }) => {
     return (
         <>
 
-        <SliderBullets profileData={profileData}/>
+            {/* <SliderBullets profileData={profileData}/>
+         */}
+            <img
+                className="profile-img"
+                src={server_ip + profileData?.image1 || `/images/pic4.png`}
+                // src={`/images/slides/slider-mainbg-03.jpg`}
+                alt="Profile Image"
+                style={{ maxWidth: "100%", height: "auto", borderRadius: "" }}
+            />
 
 
-            <section className="ttm-row connect-section_1 bg-img8 clearfix">
+            <section className="ttm-row connect-section_1 bg-img8 clearfix ">
                 <div className="container">
                     {/*row*/}
                     <div className="row">
@@ -111,16 +119,12 @@ const Home = ({ title }) => {
                                         <i className="flaticon flaticon-psychological-help" />
                                     </div>
                                 </div>
-                                <div className="featured-content d-flex" style={{ fontSize: "30px" }}>
+                                <div className="featured-content" style={{ fontSize: "30px" }}>
                                     <div className="featured-title">
-                                        <h3>Email: {ContactInfo.contact_email}</h3>
+                                        <h4>Call us On: <br /> {ContactInfo.contact_phone}</h4>
                                     </div>
-                                    <div className="featured-title">
-                                        <h3>Call us On: {ContactInfo.contact_phone}</h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>Address: {ContactInfo.address}</p>
-                                    </div>
+
+
                                 </div>
                                 <Link
                                     className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-icon-btn-right ttm-btn-color-dark"
@@ -140,14 +144,34 @@ const Home = ({ title }) => {
             </section>
 
 
-            <section className="ttm-row zero-padding-section bg-layer-equal-height res-991-pb-45 ttm-bgcolor-white clearfix" style={{ marginTop: "300px" }}>
+            <section className="ttm-row zero-padding-section bg-layer-equal-height res-991-pb-45 ttm-bgcolor-white clearfix" style={{ marginTop: "250px" }}>
                 <div className="container">
                     {/* row */}
                     <div className="row">
                         {clinicProfile
                             ?
                             <>
-                                < div className="col-lg-5 col-md-12">
+                                <div className="col-lg-7 col-md-7 col-sm-7">
+                                    <div className="ttm-bg ttm-col-bgcolor-yes ttm-right-span ttm-bgcolor-white  spacing-6">
+                                        <div className="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                                            <div className="ttm-col-wrapper-bg-layer-inner" />
+                                        </div>
+                                        <div className="layer-content">
+                                            {/*section title*/}
+                                            <div className="section-title">
+                                                <div className="title-header">
+                                                    <h5>{clinicProfile?.welcome_heading}</h5>
+                                                    <h2 className="title">
+                                                        <strong>{clinicProfile?.highlighted_text}</strong> ({clinicProfile?.clinic_name})
+                                                    </h2>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                < div className="col-lg-5 col-md-5 col-sm-5">
                                     <div className="ttm-bg ttm-col-bgcolor-yes spacing-5 z-index-0">
                                         <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" />
                                         <div className="layer-content">
@@ -159,82 +183,21 @@ const Home = ({ title }) => {
                                                     title="single-img-two"
                                                     alt="single-img-five"
                                                 />
-                                                <div className="featured-content" style={{ marginTop: "40px" }}>
-                                                    <div className="featured-title">
+                                                <div className="featured-content " style={{ marginTop: "30px" }}>
+                                                    <div className="featured-title ">
                                                         <h3>{clinicProfile?.doctor_name}</h3>
                                                     </div>
 
                                                 </div>
+
                                             </div>
                                             {/*ttm_single_image-wrapper end*/}
-                                            {/*featured-icon-box*/}
-                                            <div className="featured-icon-box style9 text-center icon-align-top-content ttm-bgcolor-skincolor">
-                                                <div className="featured-icon-box-inner-1">
-                                                    <div className="featured-icon-box-inner-2">
-                                                        <div className="featured-icon">
-                                                            <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-lg">
-                                                                <i className="flaticon flaticon-psychology-3" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="featured-content">
-                                                            <div className="featured-title">
-                                                                <h5>{clinicProfile?.experience_years} Years</h5>
-                                                            </div>
-                                                            <div className="featured-desc">
-                                                                <p>Experience Of Psychology</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/* featured-icon-box end*/}
+
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-7 col-md-12">
-                                    <div className="ttm-bg ttm-col-bgcolor-yes ttm-right-span ttm-bgcolor-white z-index-2 spacing-6">
-                                        <div className="ttm-col-wrapper-bg-layer ttm-bg-layer">
-                                            <div className="ttm-col-wrapper-bg-layer-inner" />
-                                        </div>
-                                        <div className="layer-content">
-                                            {/*section title*/}
-                                            <div className="section-title">
-                                                <div className="title-header">
-                                                    <h5>{clinicProfile?.welcome_heading}</h5>
-                                                    <h2 className="title">
-                                                        Modern caring mental health and <strong>{clinicProfile?.highlighted_text}</strong> sciences ({clinicProfile?.clinic_name})
-                                                    </h2>
-                                                </div>
-                                                <div className="title-desc">
-                                                    <p>
-                                                        <b>
-                                                            Welcome to <span style={{ color: "#e91e63" }}>{clinicProfile?.clinic_name}</span> —
-                                                            {clinicProfile.description1}
-                                                        </b>
-                                                    </p>
-                                                    <p>
-                                                        {clinicProfile.description2}
-                                                    </p>
-                                                    <p>
-                                                        {clinicProfile.description3}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            {/*section title end*/}
-                                            <div className="ttm-horizontal_sep mt-25 mb-20" />
-                                            <div className="row ttm-vertical_sep">
 
-                                            </div>
-                                            <div className="ttm-horizontal_sep mt-10 mb-10" />
-                                            <div className="d-sm-flex align-items-center m-5">
-
-                                                {/*featured-icon-box*/}
-
-                                                {/*featured-icon-box end*/}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div></> :
+                            </> :
                             <div className="text-center  text-danger my-5">
                                 <strong>
                                     <p>No Main Clinic Profile Available</p>
@@ -256,15 +219,10 @@ const Home = ({ title }) => {
                                 <h5 className="text-uppercase text-primary fw-semibold animate__animated animate__fadeInDown">
                                     Our Excellence
                                 </h5>
-                                <div className="d-flex justify-content-between align-items-center mt-5">
-                                    <h2 className="fw-bold display-5 animate__animated animate__fadeInUp mb-0">
-                                        Some of Our Clinics
+                                <div className="justify-content-between align-items-center mt-5">
+                                    <h2 className="fw-bold text-center display-5 animate__animated animate__fadeInUp mb-0">
+                                        Psychiatrist in Cities
                                     </h2>
-                                    <Link to="/clinics">
-                                        <button className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor">
-                                            View All
-                                        </button>
-                                    </Link>
                                 </div>
 
                             </div>
@@ -281,6 +239,11 @@ const Home = ({ title }) => {
                                 </strong>
                             </div>
                         }
+                        <Link to="/clinics">
+                            <button className="ttm-btn  ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor">
+                                View All
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section >
@@ -352,96 +315,8 @@ const Home = ({ title }) => {
             <TestimonialSection testimonials={testimonials} />
 
 
-            <section className="ttm-row about-section bg-layer-equal-height clearfix">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-white">
-                                <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" />
-                                <div className="layer-content">
-                                    {/*section title*/}
-                                    <div className="section-title">
-                                        <div className="title-header">
-                                            <h5>Steps towards mental fitness.</h5>
-                                            <h2 className="title">
-                                                Making Nation-Wide mental health service easily accessible
-                                            </h2>
-                                        </div>
+            <SliderBullets profileData={profileData} />
 
-                                    </div>
-                                    {/*section title end*/}
-                                    <div className="row pl-15 pt-10">
-                                        {/*featured-icon-box*/}
-                                        <div className="featured-icon-box icon-align-before-title style13">
-                                            <div className="featured-icon">
-                                                <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                                    <i className="fa fa-phone" />
-                                                </div>
-                                            </div>
-                                            <div className="featured-title">
-                                                <h5>Contact Us</h5>
-                                            </div>
-                                        </div>
-                                        {/*featured-icon-box end*/}
-                                        {/*featured-icon-box*/}
-                                        <div className="featured-icon-box icon-align-before-title style13">
-                                            <div className="featured-icon">
-                                                <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                                    <i className="fa fa-hospital-o" />
-                                                </div>
-                                            </div>
-                                            <div className="featured-title">
-                                                <h5>Book an Appointment</h5>
-                                            </div>
-                                        </div>
-                                        {/*featured-icon-box end*/}
-                                        {/*featured-icon-box*/}
-                                        <div className="featured-icon-box icon-align-before-title style13">
-                                            <div className="featured-icon">
-                                                <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-xs">
-                                                    <i className="fa fa-stethoscope" />
-                                                </div>
-                                            </div>
-                                            <div className="featured-title">
-                                                <h5>Effective Mental Health Treatment</h5>
-                                            </div>
-
-                                        </div>
-                                        {/*featured-icon-box end*/}
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="ttm-bg ttm-col-bgcolor-yes z-index-2">
-                                <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" />
-                                <div className="layer-content">
-                                    {/*ttm_single_image-wrapper*/}
-                                    <div className="ttm_single_image-wrapper res-991-pt-40">
-                                        <img
-                                            className="img-fluid"
-                                            src={profileData ? `${server_ip}${profileData.image2}` : "images/team-member/team-img03.jpg"}
-                                            title="single-img-ten"
-                                            alt="single-img-ten"
-                                        />
-                                    </div>
-                                    {/*ttm_single_image-wrapper end*/}
-                                    <div className="featured-icon-box icon-align-before-content style11">
-                                        <div className="featured-icon">
-                                            <div className="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-white ttm-icon_element-size-md">
-                                                <i className="flaticon flaticon-mental-health" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* row end */}
-                </div>
-            </section>
 
         </>
     )

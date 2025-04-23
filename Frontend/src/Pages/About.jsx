@@ -58,7 +58,9 @@ const About = ({ title }) => {
                                         {/*ttm_single_image-wrapper*/}
                                         <div className="ttm_single_image-wrapper">
                                             <img
-                                                className="img-fluid"
+                                                className=""
+                                                height="400px"
+                                                width="90%"
                                                 src="images/single-img-12.jpg"
                                                 title="single-img"
                                                 alt="single-img"
@@ -90,58 +92,6 @@ const About = ({ title }) => {
                                             </div>
                                         </div>
                                         {/*section title end*/}
-                                        <div className="ttm-horizontal_sep mt-30 mb-35" />
-                                        <div className="row">
-                                            <div className="col-lg-4 col-md-3 col-sm-12">
-                                                {/*ttm_single_image-wrapper*/}
-                                                <div className="ttm_single_image-wrapper text-sm-left">
-                                                    <img
-                                                        className="img-fluid"
-                                                        src="images/single-img-13.jpg"
-                                                        title="single-img"
-                                                        alt="single-img"
-                                                    />
-                                                </div>
-                                                {/*ttm_single_image-wrapper end*/}
-                                            </div>
-                                            <div className="col-lg-8 col-md-9 col-sm-12">
-                                                <h5 className="pt-10 res-767-pt-20">
-                                                    Our Psychology Medical Services <br />
-                                                    Hospital Founded In
-                                                    <strong className="ttm-textcolor-skincolor"> 1996</strong>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div className="ttm-horizontal_sep mt-35 res-991-mt-20 mb-35 res-991-mb-30" />
-                                        <ul className="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor">
-                                            <li>
-                                                <i className="ti ti-check" />
-                                                <div className="ttm-list-li-content">
-                                                    Preparing the discipline and profession of psychology for
-                                                    the future
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <i className="ti ti-check" />
-                                                <div className="ttm-list-li-content">
-                                                    Elevating the public’s understanding of and use of the
-                                                    psychology.
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <i className="ti ti-check" />
-                                                <div className="ttm-list-li-content">
-                                                    We help to people recover. Regain Strength. Return To Being
-                                                    You
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <a
-                                            className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-darkgrey mt-10"
-                                            href="about1.html"
-                                        >
-                                            More About Us
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -218,129 +168,7 @@ const About = ({ title }) => {
 
 
                 {/* process-section end */}
-                <section className="ttm-row process-section clearfix">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                {/* section title */}
-                                <div className="section-title text-center clearfix">
-                                    <div className="title-header">
-                                        <h5>Steps towards mental fitness</h5>
-                                        <h2 className="title">
-                                            How it helps you to stay <strong>Strong.</strong>
-                                        </h2>
-                                    </div>
-                                </div>
-                                {/* section title end */}
-                            </div>
-                        </div>
-                        {/* row */}
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="ttm-processbox-wrapper">
-                                    <div className="row">
-                                        <div className="col-lg-3 col-md-6 col-sm-6">
-                                            <div className="ttm-processbox text-center">
-                                                <div className="ttm-box-image">
-                                                    <img
-                                                        className="img-fluid"
-                                                        src="images/step-one.png"
-                                                        alt="step-one"
-                                                        title="step-one"
-                                                    />
-                                                    <div className="process-num">
-                                                        <span className="number">01</span>
-                                                    </div>
-                                                </div>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <h5>Applications.</h5>
-                                                    </div>
-                                                    <div className="ttm-box-description">
-                                                        You can apply for the treatment via our several platforms
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-6">
-                                            <div className="ttm-processbox text-center">
-                                                <div className="ttm-box-image">
-                                                    <img
-                                                        className="img-fluid"
-                                                        src="images/step-two.png"
-                                                        alt="step-two"
-                                                        title="step-two"
-                                                    />
-                                                    <div className="process-num">
-                                                        <span className="number">02</span>
-                                                    </div>
-                                                </div>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <h5>Check-ups</h5>
-                                                    </div>
-                                                    <div className="ttm-box-description">
-                                                        Medical professionals will check you up for general
-                                                        checkups
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-6">
-                                            <div className="ttm-processbox text-center">
-                                                <div className="ttm-box-image">
-                                                    <img
-                                                        className="img-fluid"
-                                                        src="images/step-three.png"
-                                                        alt="step-three"
-                                                        title="step-three"
-                                                    />
-                                                    <div className="process-num">
-                                                        <span className="number">03</span>
-                                                    </div>
-                                                </div>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <h5>Consultation</h5>
-                                                    </div>
-                                                    <div className="ttm-box-description">
-                                                        Our team will arrange consultation regarding the problem
-                                                        you use
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-6">
-                                            <div className="ttm-processbox text-center">
-                                                <div className="ttm-box-image">
-                                                    <img
-                                                        className="img-fluid"
-                                                        src="images/step-four.png"
-                                                        alt="step-four"
-                                                        title="step-four"
-                                                    />
-                                                    <div className="process-num">
-                                                        <span className="number">04</span>
-                                                    </div>
-                                                </div>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <h5>Scheming</h5>
-                                                    </div>
-                                                    <div className="ttm-box-description">
-                                                        Finally treatments begin forward to the healthy inside -
-                                                        out you.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* row end */}
-                    </div>
-                </section>
+               
                 {/* process-section end */}
 
             </div>
