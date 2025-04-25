@@ -4,7 +4,8 @@ from django.urls import path, include, re_path
 from django.views.static import serve
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
-
+from django.conf import settings
+from django.conf.urls.static import static
 from .settings import MEDIA_ROOT, STATIC_ROOT
 
 schema_view = get_schema_view(
@@ -33,8 +34,7 @@ urlpatterns += [
     path('', include('src.api.urls'), name='api`s'),
 ]
 
-# MEDIA AND STATIC URLS
-urlpatterns += [
-    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    re_path(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
-]
+# This line is sufficient for development to serve both media and static files
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
