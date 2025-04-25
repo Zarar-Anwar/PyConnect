@@ -23,6 +23,6 @@ const teamMembers = [
    
 ];
 
-const server_ip = 'http://localhost:8000'
+const server_ip = 'https://flash-tele-psychiatry.pk/api/'
 
 export { ContactInfo, teamMembers, server_ip}

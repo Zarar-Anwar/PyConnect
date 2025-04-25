@@ -5,8 +5,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-r!okeoo)dz&gy!hx%i9(=$f&p1x3b@&s61n!q31xuoh(5lmy8n'
 DEBUG = True
-ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3002"]
+ALLOWED_HOSTS = ['flash-tele-psychiatry.pk', '16.16.37.165']
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3002', 
+    'https://flash-tele-psychiatry.pk',
+    'http://16.16.37.165'
+]
+
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -47,6 +52,15 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3002",
+    "https://flash-tele-psychiatry.pk"
+]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3002', 
+    "https://flash-tele-psychiatry.pk"
+]
 
 ROOT_URLCONF = 'core.urls'
 
@@ -114,7 +128,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Secure Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -128,11 +141,16 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/api/staticfiles/'  
 
-MEDIA_URL = '/media/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static", 
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Media files (uploads)
+MEDIA_URL = '/api/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
