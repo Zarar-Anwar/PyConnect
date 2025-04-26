@@ -24,7 +24,7 @@ const teamMembers = [
 let server_ip;
 
 if (process.env.NODE_ENV === "production") {
-  server_ip = "https://flash-tele-psychiatry.pk/api/";
+  server_ip = "https://flash-tele-psychiatry.pk/";
 } else {
   server_ip = "http://localhost:8000";
 }
