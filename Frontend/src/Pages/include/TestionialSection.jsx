@@ -67,8 +67,8 @@ const TestimonialSection = ({ testimonials }) => {
                   </div>
                   {testimonials?.length > 0 ?
                     <Slider {...settings}>
-                      {testimonials.map((item, idx) => (
-                        <div key={idx} className="p-2">
+                      {testimonials.map((item) => (
+                        <div className="p-2">
                           <div className="testimonials style2">
                             <div className="testimonial-content">
                               <blockquote>{item.quote}</blockquote>

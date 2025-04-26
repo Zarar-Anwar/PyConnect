@@ -1,16 +1,15 @@
 from pathlib import Path
 import os
+from decouple import config, Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-r!okeoo)dz&gy!hx%i9(=$f&p1x3b@&s61n!q31xuoh(5lmy8n'
-DEBUG = True
-ALLOWED_HOSTS = ['flash-tele-psychiatry.pk', '16.16.37.165']
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3002', 
-    'https://flash-tele-psychiatry.pk',
-    'http://16.16.37.165'
-]
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', cast=bool)
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=Csv())
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=Csv())
 
 
 INSTALLED_APPS = [
@@ -53,14 +52,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3002",
-    "https://flash-tele-psychiatry.pk"
-]
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:3002', 
-    "https://flash-tele-psychiatry.pk"
-]
+
 
 ROOT_URLCONF = 'core.urls'
 

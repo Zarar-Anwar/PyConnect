@@ -14,12 +14,10 @@ const SliderBullets = ({profileData}) => {
               <img
                 className="profile-img"
                 // src= {server_ip+profileData?.image1 || `/images/pic4.png`}
-                src={`/images/slides/slider-mainbg-03.jpg`}
+                src={server_ip+profileData?.image2 || `/images/slides/slider-mainbg-03.jpg`}
                 alt="Profile Image"
                 style={{ maxWidth: "100%", height: "auto", borderRadius: "" }}
               />
-             
-        
    
         </div>
       </div>

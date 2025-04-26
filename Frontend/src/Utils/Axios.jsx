@@ -6,7 +6,7 @@ const api = axios.create({
     process.env.NODE_ENV === "production"
       ? "https://flash-tele-psychiatry.pk/api/"
       : "http://localhost:8000", // Default to localhost for development
-  timeout: 5000, // Set the request timeout if needed
+  timeout: 10000, // Set the request timeout if needed
   headers: {
     "Content-Type": "application/json",
     // 'Authorization': `Bearer ${authToken}`,

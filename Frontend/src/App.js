@@ -9,6 +9,7 @@ import Services from "./Pages/Services";
 import DoctorDetail from "./Pages/DoctorDetail";
 import Videos from "./Pages/Video";
 import Clinics from "./Pages/Clinics";
+import DoctorList from "./Pages/DoctorsList";
 
 
 
@@ -31,7 +32,8 @@ function App() {
                     <Route path="/videos" element={<Base> <Videos title={"Videos"} /> </Base>} />
                     <Route path="/clinics" element={<Base> <Clinics title={"Clinics"} /> </Base>} />
                     <Route path="/contact-us" element={<Base> <Contact title={"Contact Us"} /> </Base>} />
-                    <Route path="/doc" element={<Base> <DoctorDetail title={"Doctor's Detail"} /> </Base>} />
+                    <Route path="/doctor-details" element={<Base> <DoctorDetail title={"Doctor's Detail"} /> </Base>} />
+                    <Route path="/doctor-list" element={<Base> <DoctorList title={"Doctor's"} /> </Base>} />
              
                     <Route path='*' element={<PageNotFound404 />} />
 

@@ -40,11 +40,8 @@ class ProfileDataSectionListView(generics.ListAPIView):
         return Response(serializer.data)
 
 class DoctorListView(generics.ListAPIView):
-
-    def get(self, request):
-        data = Doctor.objects.all()
-        serializer = DoctorSerializer(data, many=True)
-        return Response(serializer.data)
+    queryset = Doctor.objects.all()
+    serializer_class = DoctorSerializer
 
 
 class MainClinicProfileListView(generics.ListAPIView):
