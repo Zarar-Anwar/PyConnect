@@ -46,7 +46,7 @@ const Footer = () => {
                                             <Link to="/contact-us">Contact Us </Link>
                                         </li>
                                         <li>
-                                            <Link to={`${server_ip}/admin/`}>Root Admin </Link>
+                                            <Link to={`${server_ip}admin/`}>Root Admin </Link>
                                         </li>
                                     </ul>
                                 </div>
