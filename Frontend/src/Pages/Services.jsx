@@ -1,15 +1,19 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 function Services({ title }) {
   return (
     <>
+            <Helmet><title>Treatments</title></Helmet>
+
       <div className="ttm-page-title-row">
         <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
                 <div className="page-title-heading">
-                  <h2 className="title"> Our Services</h2>
+                  <h2 className="title"> Our Treatments</h2>
                   <h5 className="sub-title">
                     {" "}
                     An impact of mental fitness awareness community health.
@@ -17,14 +21,14 @@ function Services({ title }) {
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
-                    <a title="Homepage" href="index.html">
-                      Home
-                    </a>
+                    <Link title="Homepage" to="/">
+                                                              Home
+                                                          </Link>
                   </span>
                   <span className="ttm-bread-sep">
                     <i className="fa fa-long-arrow-right" />
                   </span>
-                  <span>Service 2</span>
+                  <span>Treatments</span>
                 </div>
               </div>
             </div>
@@ -51,7 +55,7 @@ function Services({ title }) {
                       Smile Pure always places patients at the center of our
                       attention, and concentrate on imprd of technologies to{" "}
                       <u>
-                        <a href="contact.html">Contact Us Now</a>
+                        <Link to="/contact-us">Contact Us Now</Link>
                       </u>
                     </p>
                   </div>
@@ -73,7 +77,7 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="personality-disorders.html">Personality Disorders</a>
+                        <Link to="/treatments">Personality Disorders</Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -82,13 +86,13 @@ function Services({ title }) {
                         unstable behavior that causes problems.
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="personality-disorders.html"
+                      to="/treatments"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">
@@ -111,7 +115,7 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="troubling-emotions.html">Troubling Emotions</a>
+                        <Link to="troubling-emotions.html">Troubling Emotions</Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -120,13 +124,13 @@ function Services({ title }) {
                         all know how painful it can be to dwell
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="troubling-emotions.html"
+                     to="troubling-emotions.html"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">
@@ -149,9 +153,9 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="individual-counselling.html">
+                        <Link to="/treatments">
                           Individual Counselling
-                        </a>
+                        </Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -160,13 +164,13 @@ function Services({ title }) {
                         growth during challenge times in life.
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="individual-counselling.html"
+                     to="/treatments"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">
@@ -189,7 +193,7 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="child-counselling.html">Child Counselling</a>
+                        <Link to="/treatments">Child Counselling</Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -198,13 +202,13 @@ function Services({ title }) {
                         with one or more mental illnesses
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="child-counselling.html"
+                     to="/treatments"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">
@@ -227,7 +231,7 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="group-counselling.html">Group Counselling</a>
+                        <Link to="/treatments">Group Counselling</Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -236,13 +240,13 @@ function Services({ title }) {
                         and explore problems with each other leader.
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="group-counselling.html"
+                     to="/treatments"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">
@@ -265,7 +269,7 @@ function Services({ title }) {
                   <div className="featured-content">
                     <div className="featured-title">
                       <h5>
-                        <a href="couple-counselling.html">Couple Counselling</a>
+                        <Link to="/treatments">Couple Counselling</Link>
                       </h5>
                     </div>
                     <div className="featured-desc">
@@ -274,13 +278,13 @@ function Services({ title }) {
                         people to interact with the counsellor to explore.
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-shape-round ttm-icon-btn-right ttm-btn-color-dark"
-                      href="couple-counselling.html"
+                     to="/treatments"
                     >
                       READ MORE
                       <i className="fa fa-arrow-right" />
-                    </a>
+                    </Link>
                   </div>
                   <div className="ttm-boxbg-icon">
                     <div className="ttm-service-iconbox">

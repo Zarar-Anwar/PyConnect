@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import api from "../Utils/Axios";
 import { server_ip } from "../Utils/Data";
 import ClinicComp from "./include/ClinicsComp";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Clinics = ({ title }) => {
   const [highlights, setHighlights] = useState([]);
@@ -22,6 +24,8 @@ const Clinics = ({ title }) => {
 
   return (
     <>
+            <Helmet><title>Clinics</title></Helmet>
+    
       <div className="ttm-page-title-row">
         <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
           <div className="container">
@@ -36,9 +40,9 @@ const Clinics = ({ title }) => {
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
-                    <a title="Homepage" href="index.html">
-                      Home
-                    </a>
+                     <Link title="Homepage" to="/">
+                                                               Home
+                                                           </Link>
                   </span>
                   <span className="ttm-bread-sep">
                     <i className="fa fa-long-arrow-right" />

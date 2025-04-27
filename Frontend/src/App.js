@@ -27,7 +27,7 @@ function App() {
 
                     {/* Web Routes */}
                     <Route path='/' element={<Base><Home title={"Home"} /></Base>} />
-                    <Route path="/services" element={<Base> <Services title={"Services"} /> </Base>} />
+                    <Route path="/treatments" element={<Base> <Services title={"Services"} /> </Base>} />
                     <Route path="/about-us" element={<Base> <About title={"About Us"} /> </Base>} />
                     <Route path="/videos" element={<Base> <Videos title={"Videos"} /> </Base>} />
                     <Route path="/clinics" element={<Base> <Clinics title={"Clinics"} /> </Base>} />

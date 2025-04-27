@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import api from "../Utils/Axios";
 import { server_ip } from "../Utils/Data";
+import { Helmet } from "react-helmet";
 
 const DoctorList = () => {
   const location = useLocation();
@@ -13,6 +14,8 @@ const DoctorList = () => {
 
   return (
     <>
+            <Helmet><title>Doctors List</title></Helmet>
+
       <div className="ttm-page-title-row">
         <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
           <div className="container">
@@ -24,9 +27,9 @@ const DoctorList = () => {
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
-                    <a title="Homepage" href="/">
-                      Home
-                    </a>
+                  <Link title="Homepage" to="/">
+                                            Home
+                                        </Link>
                   </span>
                   <span className="ttm-bread-sep">
                     <i className="fa fa-long-arrow-right" />

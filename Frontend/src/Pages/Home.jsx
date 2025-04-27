@@ -11,6 +11,7 @@ import { server_ip } from "../Utils/Data";
 import ClinicComp from "./include/ClinicsComp";
 import HeroBanner from "./include/Slider";
 import SliderBullets from "./include/Slider";
+import { Helmet } from "react-helmet";
 
 const Home = ({ title }) => {
   const { state } = useContext(Store);
@@ -84,6 +85,8 @@ const Home = ({ title }) => {
 
   return (
     <>
+            <Helmet><title>Home</title></Helmet>
+
       <img
         className="profile-img"
         src={server_ip + profileData?.image1 || `/images/pic4.png`}
@@ -104,9 +107,9 @@ const Home = ({ title }) => {
                     <i className="flaticon flaticon-psychological-help" />
                   </div>
                 </div>
-                <div className="featured-content" style={{ fontSize: "30px" }}>
+                <div className="featured-content"  style={{ fontSize: "30px" }}>
                   <div className="featured-title">
-                    <h4>
+                    <h4 >
                       Call us On: <br /> {ContactInfo.contact_phone}
                     </h4>
                   </div>
@@ -116,6 +119,7 @@ const Home = ({ title }) => {
                   to="#"
                   title=""
                   tabIndex={0}
+                  onClick={() => window.open(`https://wa.me/${ContactInfo.contact_phone}`, "_blank")}
                   style={{ marginTop: "50px" }}
                 >
                   Contact Us!

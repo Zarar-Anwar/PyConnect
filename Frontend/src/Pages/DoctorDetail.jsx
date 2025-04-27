@@ -1,30 +1,33 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { server_ip } from "../Utils/Data";
+import { Helmet } from "react-helmet";
 
 function DoctorDetail() {
   const location = useLocation();
   const item = location.state?.item;
   return (
     <>
+            <Helmet><title>Doctors Details</title></Helmet>
+
       <div className="ttm-page-title-row">
         <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12">
                 <div className="page-title-heading">
-                  <h2 className="title"> {item.name}</h2>
+                  <h2 className="title"> {item?.name}</h2>
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
-                    <a title="Homepage" href="index.html">
-                      Home
-                    </a>
+                     <Link title="Homepage" to="/">
+                                                               Home
+                                                           </Link>
                   </span>
                   <span className="ttm-bread-sep">
                     <i className="fa fa-long-arrow-right" />
                   </span>
-                  <span> {item.name}</span>
+                  <span> {item?.name}</span>
                 </div>
               </div>
             </div>
@@ -46,7 +49,7 @@ function DoctorDetail() {
                           <div className="featured-thumbnail">
                             <img
                               className="img-fluid"
-                              src={server_ip+item.image || "images/team-member/team-img01.jpg"}
+                              src={server_ip+item?.image || "images/team-member/team-img01.jpg"}
                               alt="image"
                             />
                           </div>
@@ -57,10 +60,10 @@ function DoctorDetail() {
                         <div className="ttm-team-member-content pt-15 res-767-pt-40">
                           <div className="ttm-team-member-single-list">
                             <h2 className="ttm-team-member-single-title">
-                              {item.name}
+                              {item?.name}
                             </h2>
                             <span className="ttm-team-member-single-position">
-                              {item.position}
+                              {item?.position}
                             </span>
                             <div className="ttm-horizontal_sep width-100 mt-20 mb-20" />
                           </div>
@@ -71,14 +74,14 @@ function DoctorDetail() {
                                                         </h2> */}
                             <div className="wpb_wrapper">
                               <h5>Specialization</h5>
-                              <p> {item.specialization}</p>
+                              <p> {item?.specialization}</p>
                             </div>
                             <div className="wpb_wrapper">
                               <h5>Fees</h5>
                               <p>
                                 For initial Appointment <br />
                                 <strong>
-                                  Rs {item.fee.amount} for {item.fee.duration}{" "}
+                                  Rs {item?.fee?.amount} for {item?.fee?.duration}{" "}
                                   min
                                 </strong>
                               </p>
@@ -86,18 +89,18 @@ function DoctorDetail() {
                             <div className="wpb_wrapper">
                               <h5>For Appointment Contact</h5>
                               <p>
-                                <strong>{item.contact_number}</strong>
+                                <strong>{item?.contact_number}</strong>
                               </p>
                             </div>
                           </div>
 
-                          {item.license ? (
+                          {item?.license ? (
                             <div className="pt-20">
                               <h2 className="ttm-team-member-single-title">
                                 License:
                               </h2>
                               <div className="row row ttm-boxes-spacing-0px justify-content-center">
-                            {item.license.map((ob)=>(
+                            {item?.license.map((ob)=>(
                                 <div className="col-sm-3 ttm-box-col-wrapper">
                                   <img
                                     className="img-fluid"

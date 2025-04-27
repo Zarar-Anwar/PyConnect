@@ -24,9 +24,8 @@ const ClinicComp = ({ object }) => {
                 : "images/lahoreplace.jpg"
             }
             alt="Mental Health in Lahore"
-            className="rounded-4 shadow"
-            width="100%"
-            height="500px"
+            className="rounded-4 shadow img-fluid w-100"
+            style={{ objectFit: "cover", maxHeight: "500px" }}
           />
 
           {/* Doctor List Container */}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../Utils/Axios";
 import { Link } from "react-router-dom";
 import { server_ip } from "../Utils/Data";
+import { Helmet } from "react-helmet";
 
 const Videos = ({ title }) => {
   const [vlogs, setVlogs] = useState([])
@@ -18,7 +19,8 @@ const Videos = ({ title }) => {
     fetchVlogsVideos()
   }, [])
   return (
-    <>
+    <>        <Helmet><title>Videos</title></Helmet>
+
       <div className="ttm-page-title-row">
         <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
           <div className="container">
@@ -33,9 +35,9 @@ const Videos = ({ title }) => {
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
-                    <a title="Homepage" href="index.html">
-                      Home
-                    </a>
+                  <Link title="Homepage" to="/">
+                                            Home
+                                        </Link>
                   </span>
                   <span className="ttm-bread-sep">
                     <i className="fa fa-long-arrow-right" />

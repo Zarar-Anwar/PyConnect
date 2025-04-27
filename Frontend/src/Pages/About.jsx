@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../Utils/Axios";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const About = ({ title }) => {
     const [team, setTeam] = useState([])
@@ -20,6 +21,7 @@ const About = ({ title }) => {
 
     return (
         <>
+        <Helmet><title>About Us</title></Helmet>
             <div className="ttm-page-title-row">
                 <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
                     <div className="container">
@@ -30,9 +32,9 @@ const About = ({ title }) => {
                                 </div>
                                 <div className="breadcrumb-wrapper">
                                     <span>
-                                        <a title="Homepage" href="index.html">
+                                        <Link title="Homepage" to="/">
                                             Home
-                                        </a>
+                                        </Link>
                                     </span>
                                     <span className="ttm-bread-sep">
                                         <i className="fa fa-long-arrow-right" />

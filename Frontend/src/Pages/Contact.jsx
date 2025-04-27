@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Store } from "../Utils/Store";
 import api from "../Utils/Axios";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Contact = ({ title }) => {
     const { state } = useContext(Store);
@@ -40,6 +42,8 @@ const Contact = ({ title }) => {
 
     return (
         <>
+                <Helmet><title>Contact Us</title></Helmet>
+
             <div className="ttm-page-title-row">
                 <div className="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
                     <div className="container">
@@ -54,9 +58,9 @@ const Contact = ({ title }) => {
                                 </div>
                                 <div className="breadcrumb-wrapper">
                                     <span>
-                                        <a title="Homepage" href="index.html">
-                                            Home
-                                        </a>
+                                        <Link title="Homepage" to="/">
+                                                                                  Home
+                                                                              </Link>
                                     </span>
                                     <span className="ttm-bread-sep">
                                         <i className="fa fa-long-arrow-right" />
