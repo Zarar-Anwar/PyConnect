@@ -85,7 +85,9 @@ const Home = ({ title }) => {
 
   return (
     <>
-            <Helmet><title>Home</title></Helmet>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
 
       <img
         className="profile-img"
@@ -107,9 +109,9 @@ const Home = ({ title }) => {
                     <i className="flaticon flaticon-psychological-help" />
                   </div>
                 </div>
-                <div className="featured-content"  style={{ fontSize: "30px" }}>
+                <div className="featured-content" style={{ fontSize: "30px" }}>
                   <div className="featured-title">
-                    <h4 >
+                    <h4>
                       Call us On: <br /> {ContactInfo.contact_phone}
                     </h4>
                   </div>
@@ -119,7 +121,12 @@ const Home = ({ title }) => {
                   to="#"
                   title=""
                   tabIndex={0}
-                  onClick={() => window.open(`https://wa.me/${ContactInfo.contact_phone}`, "_blank")}
+                  onClick={() =>
+                    window.open(
+                      `https://wa.me/${ContactInfo.contact_phone}`,
+                      "_blank"
+                    )
+                  }
                   style={{ marginTop: "50px" }}
                 >
                   Contact Us!
@@ -167,28 +174,48 @@ const Home = ({ title }) => {
                       <div className="ttm-bg ttm-col-bgcolor-yes spacing-5 z-index-0">
                         <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" />
                         <div className="layer-content">
-                          {/*ttm_single_image-wrapper*/}
+                          {/* ttm_single_image-wrapper */}
                           <div className="ttm_single_image-wrapper txt-md-left">
-                            <img
-                              className="img-fluid"
-                              src={
-                                clinicProfile
-                                  ? `${server_ip}${clinicProfile.doctor.image}`
-                                  : "images/team-member/team-img06.jpg"
-                              }
-                              title="single-img-two"
-                              alt="single-img-five"
-                            />
                             <div
-                              className="featured-content "
+                              style={{
+                                position: "relative",
+                                width: "100%",
+                                paddingTop: "100%", // 1:1 aspect ratio (square)
+                                overflow: "hidden",
+                                borderRadius: "20px", // optional: rounded corners
+                                boxShadow: "0 0 10px rgba(0,0,0,0.1)", // optional: nice shadow
+                              }}
+                            >
+                              <img
+                                className="img-fluid"
+                                src={
+                                  clinicProfile
+                                    ? `${server_ip}${clinicProfile?.doctor_image}`
+                                    : "images/team-member/team-img06.jpg"
+                                }
+                                title="single-img-two"
+                                alt="single-img-five"
+                                style={{
+                                  position: "absolute",
+                                  top: 0,
+                                  left: 0,
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover", // makes sure it fills nicely
+                                }}
+                              />
+                            </div>
+
+                            <div
+                              className="featured-content"
                               style={{ marginTop: "30px" }}
                             >
-                              <div className="featured-title ">
+                              <div className="featured-title">
                                 <h3>{clinicProfile?.doctor.name}</h3>
                               </div>
                             </div>
                           </div>
-                          {/*ttm_single_image-wrapper end*/}
+                          {/* ttm_single_image-wrapper end */}
                         </div>
                       </div>
                     </div>

@@ -17,16 +17,33 @@ const ClinicComp = ({ object }) => {
             {object.subtitle}
           </small>
 
-          <img
-            src={
-              object.main_image
-                ? `${server_ip}${object.main_image}`
-                : "images/lahoreplace.jpg"
-            }
-            alt="Mental Health in Lahore"
-            className="rounded-4 shadow img-fluid w-100"
-            style={{ objectFit: "cover", maxHeight: "500px" }}
-          />
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              paddingTop: "56.25%", // 16:9 Aspect Ratio
+              overflow: "hidden",
+              borderRadius: "16px",
+              boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+            }}
+          >
+            <img
+              src={
+                object.main_image
+                  ? `${server_ip}${object.main_image}`
+                  : "images/lahoreplace.jpg"
+              }
+              alt="Mental Health in Lahore"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
 
           {/* Doctor List Container */}
           <div className="row mt-3 justify-content-center">
