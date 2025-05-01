@@ -6,15 +6,6 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class Application(models.Model):
     name = models.CharField(max_length=100, help_text='Application name', default='Zaala Society')
-    short_name = models.CharField(max_length=10, help_text='Your application short name', default='ZS')
-    tagline = models.CharField(
-        max_length=100, help_text='Your application business line', default='will be update it soon'
-    )
-    description = models.TextField(
-        default="will be update it soon",
-        help_text='Application description'
-    )
-
     logo = models.ImageField(
         upload_to='core/application/images', null=True, blank=True,
         help_text='Application real colors logo'
@@ -31,14 +22,13 @@ class Application(models.Model):
     address = models.CharField(
         max_length=255, help_text='office address', default='Mandian Abbottabad Near Comsats University'
     )
-    latitude = models.DecimalField(max_digits=10, decimal_places=6, help_text='latitude', default=23.7)
-    longitude = models.DecimalField(max_digits=10, decimal_places=6, help_text='longitude', default=90.3)
 
-    terms_url = models.URLField(
-        max_length=255, default='https://zaalasociety.com/terms-of-use/', help_text='Terms and Conditions page link'
-    )
-
-    version = models.CharField(max_length=10, help_text='Current version', default='1.0.0')
+    facebook = models.URLField(max_length=255, blank=True, null=True, help_text='Facebook page URL')
+    twitter = models.URLField(max_length=255, blank=True, null=True, help_text='Twitter profile URL')
+    linkedin = models.URLField(max_length=255, blank=True, null=True, help_text='LinkedIn page URL')
+    instagram = models.URLField(max_length=255, blank=True, null=True, help_text='Instagram profile URL')
+    youtube = models.URLField(max_length=255, blank=True, null=True, help_text='YouTube channel URL')
+  
     is_active = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
 

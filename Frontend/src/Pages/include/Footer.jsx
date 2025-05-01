@@ -77,6 +77,7 @@ const Footer = () => {
                     <li>
                       Sunday<span className="service-price">Closed</span>
                     </li>
+                    
                   </ul>
                 </div>
               </div>

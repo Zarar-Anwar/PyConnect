@@ -211,7 +211,51 @@ const Home = ({ title }) => {
                               style={{ marginTop: "30px" }}
                             >
                               <div className="featured-title">
-                                <h3>{clinicProfile?.doctor.name}</h3>
+                                <h3>
+                                <Link
+                                    to={`https://wa.me/${ContactInfo.contact_phone}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                      marginLeft: "10px",
+                                      padding: "6px 12px",
+                                      backgroundColor: "#25D366",
+                                      color: "white",
+                                      borderRadius: "5px",
+                                      textDecoration: "none",
+                                      display: "inline-block",
+                                    }}
+                                  >
+                                    <i
+                                      className="fa fa-whatsapp"
+                                      style={{ marginRight: "6px" }}
+                                    ></i>
+                                   
+                                  </Link>
+
+                                  {/* Phone Button */}
+                                  <Link
+                                    to={`tel:${ContactInfo.contact_phone}`}
+                                    style={{
+                                      marginLeft: "10px",
+                                      padding: "6px 12px",
+                                      backgroundColor: "rgb(1, 182, 173)",
+                                      color: "white",
+                                      borderRadius: "5px",
+                                      textDecoration: "none",
+                                      display: "inline-block",
+                                    }}
+                                  >
+                                    <i
+                                      className="fa fa-phone"
+                                      style={{ marginRight: "6px" }}
+                                    ></i>
+                                   
+                                  </Link>
+                                  {ContactInfo.contact_phone}
+                                  {/* WhatsApp Button */}
+                                 
+                                </h3>
                               </div>
                             </div>
                           </div>

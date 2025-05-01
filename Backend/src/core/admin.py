@@ -7,7 +7,7 @@ from .models import (
 
 @admin.register(Application)
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ('name', 'short_name', 'tagline', 'is_active', 'created_on')
+    list_display = ('name', 'is_active', 'created_on')
 
 
 

@@ -44,27 +44,6 @@ const ClinicComp = ({ object }) => {
               }}
             />
           </div>
-
-          {/* Doctor List Container */}
-          <div className="row mt-3 justify-content-center">
-            {object.doctors?.slice(0, 4).map((doctor, index) => (
-              <div className="col-6 col-md-3 text-center mb-4" key={index}>
-                <img
-                  src={
-                    doctor?.image
-                      ? `${server_ip}${doctor?.image}`
-                      : "images/team-member/team-img06.jpg"
-                  }
-                  alt={doctor?.name}
-                  className="rounded-circle"
-                  style={{ width: 100, height: 100, objectFit: "cover" }}
-                />
-                <div className="mt-2">
-                  <strong>{doctor?.name}</strong>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </Link>
     </>
