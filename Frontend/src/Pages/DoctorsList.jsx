@@ -22,8 +22,8 @@ const DoctorList = () => {
             <div className="row align-items-center">
               <div className="col-lg-12">
                 <div className="page-title-heading">
-                  <h2 className="title">Doctors</h2>
-                  <h5 className="sub-title"> Our Honourable Doctors</h5>
+                  <h2 className="title">{object?.clinic_name} Doctors</h2>
+                  <h5 className="sub-title"> </h5>
                 </div>
                 <div className="breadcrumb-wrapper">
                   <span>
@@ -45,18 +45,7 @@ const DoctorList = () => {
       <section className="ttm-row team-member-section_1 clearfix">
         <div className="container">
           {/*row*/}
-          <div className="row">
-            <div className="col-lg-8 col-md-8 col-sm-10 m-auto">
-              {/*section-title*/}
-              <div className="section-title title-style-center_text">
-                <div className="title-header">
-                  <h5>Team Member!</h5>
-                  <h2 className="title">Our Dedicated Team Members</h2>
-                </div>
-              </div>
-              {/*section-title end*/}
-            </div>
-          </div>
+
           {/*row end*/}
           {/* row */}
           <div className="row">
