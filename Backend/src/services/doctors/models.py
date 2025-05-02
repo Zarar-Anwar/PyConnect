@@ -118,12 +118,10 @@ class VlogPost(models.Model):
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=100)
-    role = models.CharField(max_length=100)
-    quote = models.TextField()
     image = models.ImageField(upload_to='testimonials/')
 
     def __str__(self):
-        return f"{self.name} - {self.role}"
+        return f"{self.name}"
     
 
 class TeamMember(models.Model):

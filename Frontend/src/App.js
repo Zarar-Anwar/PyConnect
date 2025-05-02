@@ -10,6 +10,7 @@ import DoctorDetail from "./Pages/DoctorDetail";
 import Videos from "./Pages/Video";
 import Clinics from "./Pages/Clinics";
 import DoctorList from "./Pages/DoctorsList";
+import AllDoctorList from "./Pages/AllDoctorList";
 
 
 
@@ -34,7 +35,8 @@ function App() {
                     <Route path="/contact-us" element={<Base> <Contact title={"Contact Us"} /> </Base>} />
                     <Route path="/doctor-details" element={<Base> <DoctorDetail title={"Doctor's Detail"} /> </Base>} />
                     <Route path="/doctor-list" element={<Base> <DoctorList title={"Doctor's"} /> </Base>} />
-             
+                    <Route path="/doctor-list-all" element={<Base> <AllDoctorList title={"Doctor's List"} /> </Base>} />
+
                     <Route path='*' element={<PageNotFound404 />} />
 
                 </Routes>

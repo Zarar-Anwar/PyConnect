@@ -90,11 +90,10 @@ const Home = ({ title }) => {
       </Helmet>
 
       <img
-        className="profile-img"
-        src={server_ip + profileData?.image1 || `/images/pic4.png`}
-        // src={`/images/slides/slider-mainbg-03.jpg`}
-        alt="Profile Image"
-        style={{ maxWidth: "100%", height: "auto", borderRadius: "" }}
+          className="profile-img img-fluid mx-auto d-block"
+          src={server_ip + profileData?.image1 || `/images/pic4.png`}
+          alt="Profile Image"
+          style={{maxWidth: "100%", height: "auto", borderRadius: "8px"}}
       />
 
       <section className="ttm-row connect-section_1 bg-img8 clearfix ">
@@ -163,7 +162,7 @@ const Home = ({ title }) => {
                                 <strong>
                                   {clinicProfile?.highlighted_text}
                                 </strong>{" "}
-                                ({clinicProfile?.clinic.clinic_name})
+                                ({clinicProfile?.clinic?.clinic_name})
                               </h2>
                             </div>
                           </div>
@@ -230,7 +229,7 @@ const Home = ({ title }) => {
                                       className="fa fa-whatsapp"
                                       style={{ marginRight: "6px" }}
                                     ></i>
-                                   
+
                                   </Link>
 
                                   {/* Phone Button */}
@@ -250,11 +249,11 @@ const Home = ({ title }) => {
                                       className="fa fa-phone"
                                       style={{ marginRight: "6px" }}
                                     ></i>
-                                   
+
                                   </Link>
                                   {ContactInfo.contact_phone}
                                   {/* WhatsApp Button */}
-                                 
+
                                 </h3>
                               </div>
                             </div>
