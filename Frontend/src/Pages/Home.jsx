@@ -140,7 +140,7 @@ const Home = ({ title }) => {
 
       <section
         className="ttm-row zero-padding-section bg-layer-equal-height res-991-pb-45 ttm-bgcolor-white clearfix"
-        style={{ marginTop: "250px" }}
+        style={{ marginTop: "150px" }}
       >
         <div className="container">
           {clinicProfile ? (
@@ -182,7 +182,8 @@ const Home = ({ title }) => {
                                 paddingTop: "100%", // 1:1 aspect ratio (square)
                                 overflow: "hidden",
                                 borderRadius: "20px", // optional: rounded corners
-                                boxShadow: "0 0 10px rgba(0,0,0,0.1)", // optional: nice shadow
+                                boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+                                marginTop:"80px"// optional: nice shadow
                               }}
                             >
                               <img
