@@ -1,11 +1,12 @@
 from django.contrib import admin
 from .models import (
     ProfileDataSection, Doctor, Fee, License, MainClinicProfile,
-    ClinicHighlight, BookingGuideVideo, VlogPost, Testimonial,TeamMember
+    ClinicHighlight, BookingGuideVideo, VlogPost, Testimonial, TeamMember, Video
 )
 
-admin.site.register(TeamMember)
+admin.site.register(Video)
 admin.site.register(ProfileDataSection)
+admin.site.register(TeamMember)
 admin.site.register(Doctor)
 admin.site.register(Fee)
 admin.site.register(License)

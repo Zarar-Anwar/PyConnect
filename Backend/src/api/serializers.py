@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from ..services.doctors.models import (
     ProfileDataSection, Doctor, Fee, License, MainClinicProfile,
-    ClinicHighlight, BookingGuideVideo, VlogPost, Testimonial, TeamMember
+    ClinicHighlight, BookingGuideVideo, VlogPost, Testimonial, TeamMember, Video
 )
 from ..core.models import ContactMessage, Application
 
@@ -18,6 +18,12 @@ class ProfileDataSectionSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class VideoSerializer(serializers.ModelSerializer):
+    doctor = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all())
+
+    class Meta:
+        model = Video
+        fields = '__all__'
 
 class LicenseSerializer(serializers.ModelSerializer):
     doctor = serializers.PrimaryKeyRelatedField(queryset=Doctor.objects.all()) 
@@ -40,6 +46,7 @@ class DoctorSerializer(serializers.ModelSerializer):
     clinic = serializers.PrimaryKeyRelatedField(queryset=ClinicHighlight.objects.all())
     fee = FeeSerializer(read_only=True)  # One-to-one
     licenses = LicenseSerializer(many=True, read_only=True)  # One-to-many
+    videos = VideoSerializer(many=True, read_only=True)  # One-to-many
 
     class Meta:
         model = Doctor

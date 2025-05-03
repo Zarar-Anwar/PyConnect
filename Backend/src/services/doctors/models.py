@@ -61,6 +61,15 @@ class License(models.Model):
 
     def __str__(self):
         return f"License for {self.doctor.name}"
+
+class Video(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='videos')
+    video = models.FileField(upload_to='videos/', help_text="Upload an MP4 video")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.doctor.name} - {self.video}"
+
     
 
 class MainClinicProfile(models.Model):

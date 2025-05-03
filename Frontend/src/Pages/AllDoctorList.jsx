@@ -20,6 +20,7 @@ const AllDoctorList = () => {
     };
     fetchDoctors();
   }, []);
+    console.log(doctors)
 
   // Pagination Logic
   const indexOfLastDoctor = currentPage * doctorsPerPage;
