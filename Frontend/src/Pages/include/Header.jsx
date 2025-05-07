@@ -81,16 +81,21 @@ const Header = ({appData}) => {
                                     {/* Navigation Menu */}
                                     <nav
                                         className={`main-menu menu-mobile m-auto ${mobileMenuOpen ? 'show' : 'd-none d-lg-block'}`}
-                                        id="menu">
-                                        {/* Close button visible only on mobile menu */}
+                                        id="menu"
+                                    >
+                                        {/* Mobile View Close Button */}
                                         <div className="d-lg-none text-right p-3">
-                                            <button onClick={closeMenu} className="btn text-white"
-                                                    style={{backgroundColor: "rgb(1, 182, 173)"}}>
+                                            <button
+                                                onClick={closeMenu}
+                                                className="btn text-white"
+                                                style={{backgroundColor: "rgb(1, 182, 173)"}}
+                                            >
                                                 &#x2715;
                                             </button>
                                         </div>
 
-                                        <ul className="menu" style={{zIndex: "9999"}}>
+                                        {/* Desktop Menu */}
+                                        <ul className="menu d-none d-lg-flex" style={{zIndex: "9999"}}>
                                             <li className={`mega-menu-item ${location.pathname === '/' ? 'active' : ''}`}>
                                                 <Link to="/" className="mega-menu-link">Home</Link>
                                             </li>
@@ -111,7 +116,24 @@ const Header = ({appData}) => {
                                                     Doctors</Link>
                                             </li>
                                         </ul>
+
+                                        {/* Mobile Buttons */}
+                                        <div className="d-lg-none px-4 pb-4 d-flex flex-column gap-2">
+                                            <Link to="/" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>Home</Link>
+                                            <Link to="/videos" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>Videos</Link>
+                                            <Link to="/treatments" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>Treatments</Link>
+                                            <Link to="/about-us" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>About</Link>
+                                            <Link to="/contact-us" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>Contact</Link>
+                                            <Link to="/doctor-list-all" className="btn btn-outline-light w-100 text-dark"
+                                                  onClick={closeMenu}>All Doctors</Link>
+                                        </div>
                                     </nav>
+
 
                                 </div>
                             </div>
