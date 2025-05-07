@@ -184,7 +184,7 @@ const Home = ({ title }) => {
                                 borderRadius: "20px", // optional: rounded corners
                                 boxShadow: "0 0 10px rgba(0,0,0,0.1)",
                                 marginTop:"80px",// optional: nice shadow
-                                objectFit:"contain"
+
                               }}
                             >
                               <img
@@ -202,7 +202,7 @@ const Home = ({ title }) => {
                                   left: 0,
                                   width: "100%",
                                   height: "100%",
-                                  objectFit: "cover", // makes sure it fills nicely
+                                  objectFit: "contain", // makes sure it fills nicely
                                 }}
                               />
                             </div>
@@ -335,44 +335,55 @@ const Home = ({ title }) => {
                   </div>
                 </div>
                 <div className="mb-20">
-                  {guideVideo ? (
-                    <div
-                      className="ttm-video-wrapper bg-transparent position-relative"
-                      style={{
-                        backgroundColor: "transparent",
-                        zIndex: 2,
-                        maxWidth: "100%",
-                        borderRadius: "10px",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <video
-                        controls
-                        autoPlay
-                        muted
-                        loop
-                        width="100%"
-                        style={{ borderRadius: "10px" }}
-                        preload="auto"
-                      >
-                        <source
-                          src={
-                            guideVideo.video
-                              ? `${server_ip}${guideVideo.video}`
-                              : "/videos/appointment-guide.mp4"
-                          }
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                  ) : (
-                    <div className="text-center  text-danger my-5">
-                      <strong>
-                        <p>No Video Available</p>
-                      </strong>
-                    </div>
-                  )}
+                 {guideVideo ? (
+  <div
+    className="ttm-video-wrapper bg-transparent position-relative"
+    style={{
+      backgroundColor: "transparent",
+      zIndex: 2,
+      maxWidth: "100%",
+      borderRadius: "10px",
+      overflow: "hidden",
+      position: "relative",
+      paddingTop: "56.25%", // 16:9 aspect ratio
+    }}
+  >
+    <video
+      controls
+      autoPlay
+      muted
+      loop
+      preload="auto"
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        borderRadius: "10px",
+        objectFit: "cover",
+        backgroundColor: "#000", // fallback in case video doesn't load
+      }}
+    >
+      <source
+        src={
+          guideVideo.video
+            ? `${server_ip}${guideVideo.video}`
+            : "/videos/appointment-guide.mp4"
+        }
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+) : (
+  <div className="text-center text-danger my-5">
+    <strong>
+      <p>No Video Available</p>
+    </strong>
+  </div>
+)}
+
                 </div>
                 {/* section title */}
 
