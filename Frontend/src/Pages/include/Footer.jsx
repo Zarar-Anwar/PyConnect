@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="second-footer">
           <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
                 <div className="widget widget_text  clearfix">
                   <h3 className="widget-title">About Us</h3>
                   <p>
@@ -35,7 +35,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
+              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 widget-area">
                 <div className="widget widget_nav_menu clearfix">
                   <h3 className="widget-title">Useful Links</h3>
                   <ul id="menu-footer-quick-links">
@@ -58,29 +58,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 widget-area">
-                <div className="widget widget_timing clearfix">
-                  <h3 className="widget-title">Our Time Schedule</h3>
-                  <ul className="ttm-pricelist-block">
-                    <li>
-                      Mon to Wed
-                      <span className="service-price">10:00 am to 2:30 pm</span>
-                    </li>
-                    <li>
-                      Thu to Fri
-                      <span className="service-price">11:00 am to 4:30 pm</span>
-                    </li>
-                    <li>
-                      Saturday
-                      <span className="service-price">10:00 am to 1:00 pm</span>
-                    </li>
-                    <li>
-                      Sunday<span className="service-price">Closed</span>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

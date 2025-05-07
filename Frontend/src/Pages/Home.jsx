@@ -183,7 +183,8 @@ const Home = ({ title }) => {
                                 overflow: "hidden",
                                 borderRadius: "20px", // optional: rounded corners
                                 boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-                                marginTop:"80px"// optional: nice shadow
+                                marginTop:"80px",// optional: nice shadow
+                                objectFit:"contain"
                               }}
                             >
                               <img
