@@ -140,7 +140,7 @@ function DoctorDetail() {
                                                                 <h5>Fees</h5>
                                                                 <p>
                                                                     For initial Appointment <br/>
-                                                                    <strong>Rs {item.fee.amount}</strong>
+                                                                    <strong>Rs {parseInt(item.fee.amount)}</strong>
                                                                 </p>
                                                             </div>
                                                         )}
@@ -150,10 +150,11 @@ function DoctorDetail() {
                                                                 <h5>Session Fees</h5>
                                                                 <p>
                                                                     For Session Appointment <br/>
-                                                                    <strong>Rs {item.fee.session_amount}</strong>
+                                                                    <strong>Rs {parseInt(item.fee.session_amount)}</strong>
                                                                 </p>
                                                             </div>
                                                         )}
+
 
                                                         <div className="wpb_wrapper">
                                                             <h5>For Appointment Contact</h5>
@@ -275,7 +276,7 @@ function DoctorDetail() {
                                                                     768: {slidesPerView: 2},
                                                                 }}
                                                             >
-                                                            {item.videos.map((video, idx) => (
+                                                                {item.videos.map((video, idx) => (
                                                                     <SwiperSlide key={idx}>
                                                                         <VideoSlide src={getMediaUrl(video?.video)}/>
                                                                     </SwiperSlide>
