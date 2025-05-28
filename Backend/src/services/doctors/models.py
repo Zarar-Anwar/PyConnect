@@ -47,6 +47,7 @@ class Fee(models.Model):
     doctor = models.OneToOneField(Doctor, on_delete=models.CASCADE, related_name='fee')
     description = models.TextField(blank=True, null=True)  # e.g., For initial appointment
     amount = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    session_amount = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     duration = models.CharField(max_length=50, blank=True, null=True)  # e.g., "20 min"
     created_at = models.DateTimeField(auto_now_add=True)
 

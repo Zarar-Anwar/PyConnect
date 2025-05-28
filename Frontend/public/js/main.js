@@ -277,16 +277,6 @@ jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
 
 });
 
-$(document).ready(function() {
-    var e = '<div class="cmt_floting_customsett">'+
-                '<a target="_blank" href="https://support.preyantechnosys.com/" class="tmtheme_fbar_icons"><i class="fa fa-headphones"></i><span>Support</span></a>'+
-                '<a target="_blank" href="https://preyantechnosys.com/" class="tmtheme_fbar_icons"><i class="themifyicon themifyicon ti-pencil"></i><span>Customization</span></a>'+
-                '<a target="_blank" href="https://1.envato.market/jKd4b" class="tmtheme_fbar_icons"><i class="themifyicon ti-shopping-cart"></i><span class="buy_link">Buy<span></span></span></a>'+
-                '<div class="clearfix"></div>'+
-            '</div>';
-
-    $('body').append(e);
-});
 
 /*------------------------------------------------------------------------------*/
 /* 10.Skillbar
